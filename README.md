@@ -43,7 +43,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Click here](https://github.com/elasri21/planet_facts_site)
-- Live Site URL: [Click here](https://elasri21.github.io/coffeeroasters/)
+- Live Site URL: [Click here](https://elasri21.github.io/planet_facts_site/)
 
 ## My process
 
