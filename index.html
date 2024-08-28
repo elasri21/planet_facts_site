@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Planets fact site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo c-flex">
+                <h1>the planets</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a data-name="Mercury" href="#mercury">mercury</a></li>
+                    <li><a data-name="Venus" href="#venus">venus</a></li>
+                    <li><a data-name="Earth" href="#earth">earth</a></li>
+                    <li><a data-name="Mars" href="#mars">mars</a></li>
+                    <li><a data-name="Jupiter" href="#jupiter">jupiter</a></li>
+                    <li><a data-name="Saturn" href="#saturn">saturn</a></li>
+                    <li><a data-name="Uranus" href="#uranus">uranus</a></li>
+                    <li><a data-name="Neptune" href="#neptune">neptune</a></li>
+                </ul>
+            </nav>
+            <button class="open c-flex">
+                <img src="./assets/icon-hamburger.svg" alt="open menu">
+            </button>
+            <button class="close c-flex">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="planet-info">
+                <div class="image c-flex">
+                    <img src="./assets/planet-earth.svg" alt="earth">
+                </div>
+                <div class="info">
+                    <div class="help-info">
+                        <h2>earth</h2>
+                        <p class="content">
+                            Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.
+                        </p>
+                        <div class="link">
+                            source: 
+                            <a href="https://en.wikipedia.org/wiki/Earth" target="_blank">
+                                <span>wikipedia</span>
+                                <img src="./assets/icon-source.svg" alt="source">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="view">
+                        <button class="overview-btn active"><span>01</span>overview</button>
+                        <button class="structure-btn"><span>02</span>internal structure</button>
+                        <button class="surface-btn"><span>03</span>surface geology</button>
+                    </div>
+                </div>
+            </div>
+            <div class="facts">
+                <div class="box">
+                    <p>rotation time</p>
+                    <h3>0.99 days</h3>
+                </div>
+                <div class="box">
+                    <p>revolution time</p>
+                    <h3>365.26 days</h3>
+                </div>
+                <div class="box">
+                    <p>radius</p>
+                    <h3>6,371 km</h3>
+                </div>
+                <div class="box">
+                    <p>average temp</p>
+                    <h3>16&deg;C</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
