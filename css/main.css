@@ -140,9 +140,47 @@ header .container nav ul li a {
   text-transform: capitalize;
   color: #fff;
   letter-spacing: .5px;
+  position: relative;
+  cursor: pointer;
+}
+header .container nav ul li a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  transition: .3s linear;
+}
+header .container nav ul li a#mercury::before {
+  background-color: #419ebb;
+}
+header .container nav ul li a#venus::before {
+  background-color: #eda249;
+}
+header .container nav ul li a#earth::before {
+  background-color: #6f2ed6;
+}
+header .container nav ul li a#mars::before {
+  background-color: #d14c32;
+}
+header .container nav ul li a#jupiter::before {
+  background-color: #d83a34;
+}
+header .container nav ul li a#saturn::before {
+  background-color: #cd5120;
+}
+header .container nav ul li a#uranus::before {
+  background-color: #1ec2a4;
+}
+header .container nav ul li a#neptune::before {
+  background-color: #2d68f0;
 }
 header .container nav ul li a:hover {
   color: rgba(255, 255, 255, 0.8);
+}
+header .container nav ul li a.active::before {
+  width: 100%;
 }
 header .container .close {
   display: none;
@@ -254,8 +292,29 @@ main .container .planet-info .info .view button {
 main .container .planet-info .info .view button span {
   color: #ffffff4d;
 }
-main .container .planet-info .info .view button.active {
+main .container .planet-info .info .view button.active.mercury {
+  background-color: #419ebb;
+}
+main .container .planet-info .info .view button.active.venus {
+  background-color: #eda249;
+}
+main .container .planet-info .info .view button.active.earth {
   background-color: #6f2ed6;
+}
+main .container .planet-info .info .view button.active.mars {
+  background-color: #d14c32;
+}
+main .container .planet-info .info .view button.active.jupiter {
+  background-color: #d83a34;
+}
+main .container .planet-info .info .view button.active.saturn {
+  background-color: #cd5120;
+}
+main .container .planet-info .info .view button.active.uranus {
+  background-color: #1ec2a4;
+}
+main .container .planet-info .info .view button.active.neptune {
+  background-color: #2d68f0;
 }
 main .container .facts {
   margin-top: 50px;

@@ -12,10 +12,14 @@ const data = await fetchData();
 function getPlanet(btns) {
     btns.forEach(btn => {
         btn.addEventListener("click", function () {
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+            }
             for (let planet of data) {
                 if (this.dataset.name == planet.name) {
                     // console.log(planet);
                     displayPlanet(planet);
+                    this.classList.add("active");
                     return planet;
                 } else {
                     continue;
@@ -46,9 +50,9 @@ function displayPlanet(planet) {
                         </div>
                     </div>
                     <div class="view">
-                        <button class="overview-btn active"><span>01</span>overview</button>
-                        <button class="structure-btn"><span>02</span>internal structure</button>
-                        <button class="surface-btn"><span>03</span>surface geology</button>
+                        <button class="${planet.name.toLowerCase()} overview-btn active"><span>01</span>overview</button>
+                        <button class="${planet.name.toLowerCase()} structure-btn"><span>02</span>internal structure</button>
+                        <button class="${planet.name.toLowerCase()} surface-btn"><span>03</span>surface geology</button>
                     </div>
                 </div>
             </div>
@@ -118,6 +122,31 @@ const container = document.querySelector("main .container")
 const buttons = document.querySelectorAll("nav a");
 
 getPlanet(buttons);
+const earth = {
+    name: "Earth",
+    overview: {
+      content: "Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.",
+      source: "https://en.wikipedia.org/wiki/Earth"
+    },
+    structure: {
+      content: "Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.",
+      source: "https://en.wikipedia.org/wiki/Earth#Internal_structure"
+    },
+    geology: {
+      content: "The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.",
+      source: "https://en.wikipedia.org/wiki/Earth#Surface"
+    },
+    rotation: "0.99 Days",
+    revolution: "365.26 Days",
+    radius: "6,371 KM",
+    temperature: "16°c",
+    images: {
+      planet: "./assets/planet-earth.svg",
+      internal: "./assets/planet-earth-internal.svg",
+      geology: "./assets/geology-earth.png"
+    }
+}
+changeWhenClick(earth);
 
 openMenu.addEventListener("click", function() {
     this.style.display = "none";
